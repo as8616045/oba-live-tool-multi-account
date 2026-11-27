@@ -2,7 +2,6 @@ export const IPC_CHANNELS = {
   tasks: {
     liveControl: {
       connect: 'tasks:liveControl:connect',
-      connectAccounts: 'tasks:liveControl:connectAccounts',
       notifyAccountName: 'tasks:liveControl:notifyAccountName',
       disconnect: 'tasks:liveControl:disconnect',
       disconnectedEvent: 'tasks:liveControl:disconnectedEvent',
@@ -10,12 +9,9 @@ export const IPC_CHANNELS = {
     autoMessage: {
       start: 'tasks:autoMessage:start',
       stop: 'tasks:autoMessage:stop',
-      startForAccounts: 'tasks:autoMessage:startForAccounts',
-      stopForAccounts: 'tasks:autoMessage:stopForAccounts',
       stoppedEvent: 'tasks:autoMessage:stoppedEvent',
       updateConfig: 'tasks:autoMessage:updateConfig',
       sendBatchMessages: 'tasks:autoMessage:sendBatchMessages',
-      sendBatchMessagesForAccounts: 'tasks:autoMessage:sendBatchMessagesForAccounts',
     },
     autoPopUp: {
       start: 'tasks:autoPopUp:start',

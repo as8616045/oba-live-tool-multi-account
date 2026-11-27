@@ -1,18 +1,15 @@
 <div align="center">
 
   <img src="./public/favicon.png" alt="logo" width="256px" height="auto">
-  <h1> oba live tool · 多账号增强版 </h1>
+  <h1> oba live tool </h1>
   <p> 抖音小店/巨量百应/抖音团购/小红书/视频号/快手小店/淘宝直播小工具 </p>
   <br>
 
-[![GitHub Release][github release badge]](https://github.com/as8616045/oba-live-tool-multi-account/releases/latest)
+[![GitHub Release][github release badge]](https://github.com/qiutongxue/oba-live-tool/releases/latest)
 ![GitHub][github license badge]
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/qiutongxue/oba-live-tool)
+ 
 </div>
-
----
-
-> **关于本项目**：基于 [qiutongxue/oba-live-tool](https://github.com/qiutongxue/oba-live-tool) 二次开发，新增**多账号一键连接**、**自动发言/一键刷屏多账号并发**、**批量启停与结果反馈**。原项目底层已按账号隔离浏览器上下文与任务状态，本版本补齐批量操作入口。
 
 ---
 
@@ -28,9 +25,7 @@
 
 🍟 **多账号管理**：支持多组账号配置，针对不同直播间使用不同的配置
 
-🚀 **多账号一键连接**：直播控制台页面一键连接全部已配置账号，逐个完成登录
-
-🎯 **智能消息助手（多账号并发）**：自动发言页勾选多个账号，批量启停、并发发送；一键刷屏同样支持多账号
+🎯 **智能消息助手**：自动发送消息，告别重复机械喊话
 
 📦 **商品自动讲解**：自动商品弹窗，随心所欲弹讲解
 
@@ -48,13 +43,13 @@
 
 ### 下载安装
 
-本仓库暂未发布安装包，请通过源码构建使用。
+访问 [Releases](https://github.com/qiutongxue/oba-live-tool/releases/latest) 页面下载最新版本安装包
 
 ### 源码构建
 
 ```bash
-git clone https://github.com/as8616045/oba-live-tool-multi-account.git
-cd oba-live-tool-multi-account
+git clone https://github.com/qiutongxue/oba-live-tool.git
+cd oba-live-tool
 pnpm install
 pnpm build
 # 构建在项目根目录的 /release 文件夹下
@@ -68,9 +63,9 @@ pnpm build
 > [!TIP]
 > 自动发言、自动弹窗、自动回复功能都需要先连接到中控台才能使用。
 
-1. 点击功能列表的「打开中控台」进入直播控制台页面，点击「连接直播控制台」按钮；多账号场景可点「连接所有账号」一次性连接全部已配置账号（串行弹出登录窗口）
+1. 点击功能列表的「打开中控台」进入直播控制台页面，点击「连接直播控制台」按钮
    > 如果软件显示找不到浏览器，或者想要自己指定浏览器位置，请前往 **应用设置** 页面的 **浏览器设置** 中进行相关设置。
-2. 如果是第一次连接，请在弹出的页面中登录账号（各账号登录态独立保存，互不干扰）
+2. 如果是第一次连接，请在弹出的页面中登录账号
 3. 等待控制台状态显示绿色圆点和「已连接」，即连接成功
 4. 部分平台如视频号、淘宝需要先开播后再连接
 
@@ -90,18 +85,6 @@ pnpm build
 
 
 ### 自动发言
-
-#### 多账号发言
-
-在自动发言页顶部的「发言账号」卡片中勾选目标账号（仅已连接的账号可勾选），支持「全选已连接」「清空」。勾选后：
-
-- 点击「开始任务」会在所有选中账号上并发启动自动发言；配置以当前账号的消息列表作为模板下发。
-- 「一键刷屏」同样作用于所有选中账号。
-- 操作结果按账号反馈，区分全部成功 / 部分成功 / 全部失败；某账号失败不影响其他账号。
-- 断连账号会从可用目标中自动过滤，不会继续发送。
-
-> [!NOTE]
-> 各账号的独立配置仍保留；单账号单独发言时按各自配置执行。批量模式下统一使用当前账号配置作为话术模板。
 
 #### 变量
 
@@ -240,9 +223,7 @@ AI 助手只支持文本对话，在使用 AI 助手功能前，请先设置好�
 
 软件并不支持多开，但是支持设置多个账号，各个账号之间的环境以及任务是独立的，并且能够同时运行。
 
-可以通过软件界面点击右上角的加号按钮添加新账号。新账号除了部分通用设置外的所有设置，包括浏览器上下文环境都是独立的，所以不用担心新旧账号同时运行会产生冲突（除非你连接同一个中控台）。
-
-本版本新增「连接所有账号」「多账号发言」入口，可在直播控制台与自动发言页对多个账号统一操作；每个账号仍使用各自的浏览器上下文、登录态与任务状态。
+可以通过软件界面点击右上角的加号按钮添加新账号。新账号除了部分通用设置外的所有设置，包括浏览器上下文环境都是独立的，所以不用担心新旧账号同时运行会产生冲突（除非你连接同一个中控台）
 
 ![添加新账号](./screenshot/account_switch.png)
 
@@ -279,7 +260,7 @@ AI 助手只支持文本对话，在使用 AI 助手功能前，请先设置好�
 
 <!-- badage -->
 
-[github release badge]: https://img.shields.io/github/v/release/as8616045/oba-live-tool-multi-account?style=flat&logo=github&labelColor=%2324292e&color=%231a7f37
+[github release badge]: https://img.shields.io/github/v/release/qiutongxue/oba-live-tool?style=flat&logo=github&labelColor=%2324292e&color=%231a7f37
 
 
 [github license badge]: https://img.shields.io/badge/license-MIT-5c6bc0?style=flat&labelColor=24292e
